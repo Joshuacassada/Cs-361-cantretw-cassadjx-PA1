@@ -20,6 +20,7 @@ struct state {
   action*         startWarranty;
   action*         entry_to;
   action*         exit_from;
+  
 };
 
 
