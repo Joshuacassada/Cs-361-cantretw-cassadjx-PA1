@@ -30,6 +30,7 @@ struct state {
   action* dispatch_factory_lines;
   action* shutdown_factory_lines;
   action* update_stats;
+  action* refund;
   action* charge_client;
   action* get_address;
   action* start_warranty;
