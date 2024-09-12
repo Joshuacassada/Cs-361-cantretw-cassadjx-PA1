@@ -36,7 +36,7 @@ state_t* order_received()
 {   
     getOrderSize();
     resetAttempts();
-    &processing;
+    return &processing;
 }
 
 static void getOrderSize()
