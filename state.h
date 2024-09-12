@@ -17,7 +17,7 @@ struct state {
   event_handler* invalid_payment;
   event_handler* valid_payment;
   event_handler* manufacture_completed;
-  event_handler* manufacture_failed
+  event_handler* manufacture_failed;
   event_handler* shippment_lost; 
   event_handler* shippment_arrived;
 
