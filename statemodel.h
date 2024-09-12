@@ -11,6 +11,6 @@ extern state_t manufacturing;
 extern state_t shipping;
 
 void printStateName(void);
-void handle_event( event current_event );
+void handle_event( statsSetting current_event );
 
 #endif
