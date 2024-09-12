@@ -9,31 +9,31 @@ extern state_t *  default_event_handler();
 extern void       default_action();
 
 state_t shipping = {
-    default_event_handler;
-    default_event_handler;
-    default_event_handler; 
-    default_event_handler;
-    default_event_handler;
-    shipment_lost; 
-    shipment_arrived;
+    default_event_handler,
+    default_event_handler,
+    default_event_handler, 
+    default_event_handler,
+    default_event_handler,
+    shipment_lost,
+    shipment_arrived,
 
     // Actions (Entry and Exit)
-    default_action; 
-    default_action; 
-    default_action;
-    default_action; 
-    default_action; 
-    default_action; 
-    default_action; 
-    refund;
-    update_stats;
-    default_action;
-    default_action;   
-    start_warranty;
+    default_action, 
+    default_action, 
+    default_action,
+    default_action, 
+    default_action, 
+    default_action, 
+    default_action, 
+    refund,
+    update_stats,
+    default_action,
+    default_action,   
+    start_warranty,
 
     // Entry and Exit actions
-    entry_to_shipping;
-    exit_from_shipping;
+    entry_to_shipping,
+    exit_from_shipping,
 };
 
 state_t*  shipment_lost()
