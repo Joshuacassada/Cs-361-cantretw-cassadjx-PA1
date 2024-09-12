@@ -1,6 +1,7 @@
 #include "processing.h"
 #include "system.h"
 #include "statemodel.h" 
+#include <stdio.h>
 
 // Declare the default event handler and the default action. 
 // They are extern because they are used in each
@@ -27,9 +28,13 @@ state_t accepting = {
 
 state_t* invalid_payment()
 {
-    if (incremental_attempts() >= 3){
+    incrementAttempts();
+    if (payAttempts >= 3){
         paymentRejected();
         return &accepting;
+    }
+    else{
+        return &processing;
     }
 }
 
@@ -40,5 +45,10 @@ state_t* valid_payment()
 
 static void entry_to()
 {
+    get_payment_method();
+}
 
+static void get_payment_method()
+{
+    printf("Get payment method");
 }
