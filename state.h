@@ -22,18 +22,10 @@ struct state {
   event_handler* shipment_arrived;
 
   // Actions (Entry and Exit)
-  action* get_order_size;
-  action* reset_attempts;
-  action* payment_rejected;
   action* get_payment_method;
-  action* increment_attempts;
   action* dispatch_factory_lines;
   action* shutdown_factory_lines;
-  action* update_stats;
-  action* refund;
-  action* charge_client;
   action* get_address;
-  action* start_warranty;
 
   // Entry and Exit actions
   action* entry_to;

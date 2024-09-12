@@ -17,14 +17,7 @@ state_t accepting = {
     default_event_handler,
     default_event_handler,
 
-    default_action,
-    default_action,
-    default_action,
     get_payment_method,
-    incremental_attempts,
-    default_action,
-    default_action,
-    default_action,
     default_action,
     default_action,
     default_action,
@@ -34,7 +27,10 @@ state_t accepting = {
 
 state_t* invalid_payment()
 {
-    
+    if (incremental_attempts() >= 3){
+        paymentRejected();
+        return &accepting;
+    }
 }
 
 state_t* valid_payment()
@@ -42,3 +38,7 @@ state_t* valid_payment()
     return &manufacturing;
 }
 
+static void entry_to()
+{
+
+}

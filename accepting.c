@@ -17,13 +17,6 @@ state_t accepting = {
     default_event_handler,
     default_event_handler,
 
-    getOrderSize,
-    resetAttempts,
-    default_action,
-    default_action,
-    default_action,
-    default_action,
-    default_action,
     default_action,
     default_action,
     default_action,
@@ -37,17 +30,4 @@ state_t* order_received()
     getOrderSize();
     resetAttempts();
     return &processing;
-}
-
-static void getOrderSize()
-{
-    int count = 0;
-    if (order_received()){
-        count++;
-    }
-}
-
-static void resetAttempts()
-{
-    payAttempts = 0;
 }
