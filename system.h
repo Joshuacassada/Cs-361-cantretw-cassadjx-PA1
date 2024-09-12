@@ -1,11 +1,21 @@
-#ifndef SYSTEM_H
-#define SYSTEM_H
+#ifndef system_h
+#define system_h
 
 typedef enum {
     DONE,
     LOST,
     FAIL
 } statsSetting;
+
+typedef enum{
+    ORDER_RECEIVED,
+    INVALID_PAYMENT,
+    VALID_PAYMENT,
+    MANUFACURE_COMPLETED,
+    MANUFACTURE_FAILED,
+    SHIPMENT_LOST,
+    SHIPMENT_ARRIVED
+} events;
 
 extern int payAttempts;
 extern int order_size;

@@ -18,8 +18,8 @@ struct state {
   event_handler* valid_payment;
   event_handler* manufacture_completed;
   event_handler* manufacture_failed;
-  event_handler* shippment_lost; 
-  event_handler* shippment_arrived;
+  event_handler* shipment_lost; 
+  event_handler* shipment_arrived;
 
   // Actions (Entry and Exit)
   action* get_order_size;
