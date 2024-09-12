@@ -1,4 +1,5 @@
 #include "shipping.h"
+#include "stdio.h"
 #include "system.h"
 #include "statemodel.h" // For the other states
 
@@ -9,61 +10,38 @@ extern state_t *  default_event_handler();
 extern void       default_action();
 
 state_t shipping = {
-    default_event_handler,
-    default_event_handler,
     default_event_handler, 
     default_event_handler,
     default_event_handler,
-    shipment_lost,
+    default_event_handler,
+    default_event_handler,
+    shipment_lost, 
     shipment_arrived,
-
+  
     // Actions (Entry and Exit)
     default_action, 
     default_action, 
     default_action,
-    default_action, 
-    default_action, 
-    default_action, 
-    default_action, 
-    refund,
-    update_stats,
     default_action,
-    default_action,   
-    start_warranty,
-
+  
     // Entry and Exit actions
     entry_to_shipping,
-    exit_from_shipping,
+    default_action
 };
 
-state_t*  shipment_lost()
+
+static void entry_to_shipping()
+{
+    printf("Getting ship to Address");
+}
+state_t* shipment_lost()
 {
     refund();
-    return &accepting;
+    updateStats(LOST);
 }
-state_t*  shipment_arrived()
+state_t* shipment_arrived()
 {
-    start_warranty();
-    update_stats(DONE);
-    return &accepting;
+    startWarranty();
+    updateStats(DONE);
 }
-void start_warranty()
-{
-    
-}
-void refund()
-{
-    update_stats(LOST);
-}
-void update_stats()
-{
 
-}
-void entry_to_shipping()
-{
-
-}
-void exit_from_shipping()
-{
-    update_stats(DONE);
-}
