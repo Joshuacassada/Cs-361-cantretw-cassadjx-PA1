@@ -37,3 +37,8 @@ state_t* invalid_payment()
     
 }
 
+state_t* valid_payment()
+{
+    return &manufacturing;
+}
+

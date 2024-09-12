@@ -5,9 +5,9 @@
 
 extern state_t* current_state;
 
-void handle_event( event current_event)
+void handle_event( statsSetting current_event)
 {
-    state_t* next_state
+    state_t* next_state;
 
     next_state = NULL;
     switch( current_event )
