@@ -6,6 +6,8 @@ typedef enum {
     LOST,
     FAIL
 } statsSetting;
+#define INVALID_EVENT      -1
+
 
 typedef enum{
     ORDER_RECEIVED,
@@ -16,6 +18,8 @@ typedef enum{
     SHIPMENT_LOST,
     SHIPMENT_ARRIVED
 } events;
+#define INVALID_EVENT -1     
+
 
 extern int payAttempts;
 extern int order_size;

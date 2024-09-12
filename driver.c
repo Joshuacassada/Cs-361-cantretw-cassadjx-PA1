@@ -17,8 +17,8 @@ int main(void){
         current_event = INVALID_EVENT;
         switch(key){
             case 'c':
-                    current_event = CLOSE_BUTTON_PRESSED;
-                    puts("Event: ClOSE_BUTTON_PRESSED");
+                    current_event = accepting;
+                    puts("State: Accepting");
                     break;
             case 'C':
                     current_event = CLOSED_DETECTED;
