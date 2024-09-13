@@ -1,8 +1,8 @@
-driver : driver.o statemodel.o system.o state.o accepting.o manufacturing.o processing.o shipping.o
-     gcc driver.o statemodel.o system.o state.o accepting.o manufacturing.o processing.o shipping.o
+driver: driver.o statemodel.o system.o state.o accepting.o manufacturing.o processing.o shipping.o
+	gcc driver.o statemodel.o system.o state.o accepting.o manufacturing.o processing.o shipping.o -o driver
 
 driver.o: driver.c system.h statemodel.h
-	 gcc -c driver.c
+	gcc -c driver.c
 
 system.o: system.c system.h
 	gcc -c system.c -o system.o
@@ -24,6 +24,6 @@ manufacturing.o: state.h manufacturing.c manufacturing.h
 
 shipping.o: state.h shipping.c shipping.h
 	gcc -c shipping.c
-	
+
 clean:
 	rm *.o ; rm driver 
