@@ -9,7 +9,7 @@
 extern state_t *default_event_handler();
 extern void default_action();
 
-state_t accepting = {
+state_t manufacturing = {
     default_event_handler,
     default_event_handler,
     default_event_handler,
