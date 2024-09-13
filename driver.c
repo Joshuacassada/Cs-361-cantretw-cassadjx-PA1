@@ -49,6 +49,7 @@ int main(void) {
                 puts("Event: SHIPMENT_LOST");
                 break;
             case 'X':
+                printf("\n");
                 exit(0);
             default:
                 puts("Event: INVALID_EVENT");
