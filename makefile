@@ -12,3 +12,18 @@ statemodel.o: system.h statemodel.h statemodel.c
 
 state.o: state.h state.c
 	gcc -c state.c -o state.o
+
+accepting.o: state.h accepting.c accepting.h
+	gcc -c accepting.c
+
+processing.o: state.h processing.c processing.h
+	gcc -c processing.c
+
+manufacturing.o: state.h manufacturing.c manufacturing.h
+	gcc -c manufacturing.c
+
+shipping.o: state.h shipping.c shipping.h
+	gcc -c shipping.c
+	
+clean:
+	rm *.o ; rm driver 
