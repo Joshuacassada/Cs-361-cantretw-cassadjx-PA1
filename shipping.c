@@ -32,16 +32,18 @@ state_t shipping = {
 
 static void entry_to_shipping()
 {
-    printf("Getting ship to Address");
+    printf("Getting Ship-To Address\n");
 }
 state_t* shipment_lost()
 {
     refund();
     updateStats(LOST);
+    return &accepting;
 }
 state_t* shipment_arrived()
 {
     startWarranty();
     updateStats(DONE);
+    return &accepting;
 }
 

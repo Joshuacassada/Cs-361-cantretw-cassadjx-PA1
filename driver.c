@@ -22,36 +22,34 @@ int main(void) {
         switch (key) {
             case 'O':
                 current_event = ORDER_RECEIVED;
-                puts("Event: Order received");
+                puts("Event: ORDER_RECEIVED");
                 break;
             case 'V':
                 current_event = VALID_PAYMENT;
-                puts("Event: Payment validated");
+                puts("Event: VALID_PAYMENT");
                 break;
             case 'I':
                 current_event = INVALID_PAYMENT;
-                puts("Event: Payment rejected");
+                puts("Event: REJECTED_PAYMENT");
                 break;
             case 'F':
                 current_event = MANUFACTURE_FAILED;
-                puts("Event: Factory failed");
+                puts("Event: MANUFACTURE_FAILED");
                 break;
             case 'C':
                 current_event = MANUFACTURE_COMPLETED;
-                puts("Event: Factory success");
+                puts("Event: MANUFACTURE_COMPLETED");
                 break;
             case 'R':
                 current_event = SHIPMENT_ARRIVED;
-                puts("Event: Shipment confirmed");
+                puts("Event: SHIPMENT_ARRIVED");
                 break;
             case 'L':
                 current_event = SHIPMENT_LOST;
-                puts("Event: Shipment failed");
+                puts("Event: SHIPMENT_LOST");
                 break;
             case 'X':
-                current_event = INVALID_EVENT;
-                puts("Event: Terminate program");
-                break;
+                exit(0);
             default:
                 puts("Event: INVALID_EVENT");
         }

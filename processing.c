@@ -50,5 +50,5 @@ static void entry_to()
 
 static void get_payment_method()
 {
-    printf("Get payment method");
+    printf("Getting Payment Method\n");
 }

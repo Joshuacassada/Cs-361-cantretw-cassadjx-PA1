@@ -27,11 +27,11 @@ state_t manufacturing = {
 };
 static void dispatchFactoryLines()
 {
-    printf("Dispatching Factory Lines");
+    printf("Dispatching Factory Lines\n");
 }
 static void shutDownFactoryLines()
 {
-    printf("Shutting Down Factory Lines");
+    printf("Shutting Down Factory Lines\n");
 }
 static void entry_to_manufacturing()
 {
@@ -45,6 +45,7 @@ state_t*  manufacture_completed()
 {
     exit_from_manufacturing();
     chargeClient();
+    return &shipping;
 }
 state_t*  manufacture_failed()
 {

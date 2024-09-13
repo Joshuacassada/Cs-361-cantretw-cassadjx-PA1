@@ -23,6 +23,7 @@ void handle_event( statsSetting current_event)
             break;
         case MANUFACTURE_COMPLETED:
             next_state = current_state->manufacture_completed();
+            break;
         case MANUFACTURE_FAILED:
             next_state = current_state->manufacture_failed();
             break;
@@ -43,14 +44,14 @@ void handle_event( statsSetting current_event)
 
 void printStateName(void)
 {
-    printf("\n*****************\nCurrent State is: ");
+    printf("\n*-*-*-*-*-*-*-*-*-*-*-*\nState: ");
     if ( current_state == &accepting )
-        printf( "ACCEPTED");
+        printf( "ACCEPTING");
     else if ( current_state == &processing )
         printf ( "PROCESSING" );
     else if ( current_state == &manufacturing )
         printf( "MANUFACTURING" );
     else if (current_state == &shipping)
         printf( "SHIPPING" );
-    printf("\n*****************\n");
+    printf("\n*-*-*-*-*-*-*-*-*-*-*-*\n");
 }
