@@ -30,7 +30,7 @@ int main(void) {
                 break;
             case 'I':
                 current_event = INVALID_PAYMENT;
-                puts("Event: REJECTED_PAYMENT");
+                puts("Event: INVALID_PAYMENT");
                 break;
             case 'F':
                 current_event = MANUFACTURE_FAILED;
