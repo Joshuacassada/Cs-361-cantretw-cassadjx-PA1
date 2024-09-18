@@ -1,3 +1,9 @@
+//---------------------------------------------------------------------
+// Assignment : eBuild Term Project / Phase 1
+// Date : 9/18/2024
+// Author : Joshua Cassada and Thomas Cantrell
+// File Name : driver.c
+//---------------------------------------------------------------------
 #include "statemodel.h"
 #include "state.h"
 #include <stdio.h>

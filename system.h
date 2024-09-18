@@ -1,3 +1,9 @@
+//---------------------------------------------------------------------
+// Assignment : eBuild Term Project / Phase 1
+// Date : 9/18/2024
+// Author : Joshua Cassada and Thomas Cantrell
+// File Name : system.h
+//---------------------------------------------------------------------
 #ifndef system_h
 #define system_h
 

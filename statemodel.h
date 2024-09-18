@@ -1,3 +1,9 @@
+//---------------------------------------------------------------------
+// Assignment : eBuild Term Project / Phase 1
+// Date : 9/18/2024
+// Author : Joshua Cassada and Thomas Cantrell
+// File Name : statemodel.h
+//---------------------------------------------------------------------
 #ifndef statemodel_h
 #define statemodel_h
 

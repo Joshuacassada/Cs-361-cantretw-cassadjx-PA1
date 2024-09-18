@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------
 // Assignment : eBuild Term Project / Phase 1
-// Date :
-// Author : Mohamed Aboutabl
+// Date : 9/18/2024
+// Author : Joshua Cassada and Thomas Cantrell
 // File Name : system.c
 //---------------------------------------------------------------------
 #include "system.h"
